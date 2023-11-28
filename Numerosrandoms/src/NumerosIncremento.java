@@ -17,7 +17,10 @@ public class NumerosIncremento {
             numero2 = scanner.nextInt();
         }
 
-        // Determinar el menor y mayor de los dos números
+        System.out.println("Introduce un tercer número:");
+        int numero3 = scanner.nextInt();
+
+        // Determinar el menor y mayor de los dos primeros números
         int menor = Math.min(numero1, numero2);
         int mayor = Math.max(numero1, numero2);
 
@@ -26,6 +29,11 @@ public class NumerosIncremento {
         // Mostrar números incrementando de 7 en 7
         for (int i = menor; i <= mayor; i += 7) {
             System.out.print(i + " ");
+        }
+
+        // Mostrar el tercer número si está entre el primero y el segundo
+        if (numero3 > menor && numero3 < mayor) {
+            System.out.println("\nEl tercer número (" + numero3 + ") está entre el primero y el segundo.");
         }
 
         scanner.close();
