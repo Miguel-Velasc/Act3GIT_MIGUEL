@@ -1,17 +1,17 @@
 import java.util.Random;
 
-public class RandomNum  {
+public class RandomNum {
 
     public static void main(String[] args) {
-        mostrarNumerosAleatorios();
+        mostrarNumerosAleatorios(30);
     }
 
-    public static void mostrarNumerosAleatorios() {
+    public static void mostrarNumerosAleatorios(int cantidad) {
         Random random = new Random();
 
-        System.out.println("20 números aleatorios entre 1 y 10:");
+        System.out.println(cantidad + " números aleatorios entre 1 y 10:");
 
-        for (int i = 0; i < 20; i++) {
+        for (int i = 0; i < cantidad; i++) {
             int numeroAleatorio = random.nextInt(10) + 1;
             System.out.print(numeroAleatorio + " ");
         }
